@@ -37,27 +37,20 @@ function playRound() {
     let drawMsg = `Draw. ${capitalize(playerSelection)} vs ${capitalize(computerSelection)}.`;
     if (playerSelection === computerSelection) {
         alert(drawMsg);
-        return drawMsg;
     }
     if (playerSelection === 'rock' && computerSelection === 'scissors') {
         alert(winMsg);
-        return winMsg;
     } else if (playerSelection === 'rock') {
         alert(loseMsg);
-        return loseMsg;
     }
     if (playerSelection === 'paper' && computerSelection === 'rock') {
         alert(winMsg);
-        return winMsg;
     } else if (playerSelection === 'paper') {
         alert(loseMsg);
-        return loseMsg;
     }
     if (playerSelection === 'scissors' && computerSelection === 'paper') {
         alert(winMsg);
-        return winMsg;
     } else if (playerSelection === 'scissors') {
         alert(loseMsg);
-        return loseMsg;
     }
 }
