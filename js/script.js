@@ -4,11 +4,11 @@ function getComputerChoice() {
     let random0to2 = Math.floor(Math.random() * 3);
     // return computer choice based on random0to2 value
     if (random0to2 === 0) {
-        return 'rock';
+        return 'Rock';
     } else if (random0to2 === 1) {
-        return 'paper';
+        return 'Paper';
     } else {
-        return 'scissors';
+        return 'Scissors';
     }
 }
 // input player choice
@@ -17,11 +17,11 @@ function getPlayerChoice() {
     let playerInput;
     // validate input
     while (validChoice === false) {
-        playerInput = prompt("Rock, Paper or Scissors?").toLowerCase();
+        playerInput = capitalize(prompt("Rock, Paper or Scissors?"));
         switch (playerInput) {
-            case 'rock':
-            case 'paper':
-            case 'scissors':
+            case 'Rock':
+            case 'Paper':
+            case 'Scissors':
                 validChoice = true;
                 break;
             default:
@@ -42,13 +42,13 @@ function playRound() {
     let playerSelection = getPlayerChoice();
     let computerSelection = getComputerChoice();
     // store game result messages in following variables
-    let winMessage = `You won. ${capitalize(playerSelection)} beats ${capitalize(computerSelection)}.`;
-    let loseMessage = `You lost. ${capitalize(computerSelection)} beats ${capitalize(playerSelection)}.`;
-    let drawMessage = `Tie. ${capitalize(playerSelection)} vs ${capitalize(computerSelection)}.`;
+    let winMessage = `You won. ${playerSelection} beats ${computerSelection}.`;
+    let loseMessage = `You lost. ${computerSelection} beats ${playerSelection}.`;
+    let drawMessage = `Tie. ${playerSelection} vs ${computerSelection}.`;
     // check round result and return corresponding message
-    if ((playerSelection === 'rock' && computerSelection === 'scissors') ||
-        (playerSelection === 'paper' && computerSelection === 'rock') ||
-        (playerSelection === 'scissors' && computerSelection === 'paper')) {
+    if ((playerSelection === 'Rock' && computerSelection === 'Scissors') ||
+        (playerSelection === 'Paper' && computerSelection === 'Rock') ||
+        (playerSelection === 'Scissors' && computerSelection === 'Paper')) {
         console.log(winMessage);
         return 'win';
     } else if (playerSelection === computerSelection) {
