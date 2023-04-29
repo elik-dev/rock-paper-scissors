@@ -15,6 +15,7 @@ function getComputerChoice() {
 function getPlayerChoice() {
     let validChoice = false;
     let playerInput;
+    // validate input
     while (validChoice === false) {
         playerInput = prompt("Rock, Paper or Scissors?").toLowerCase();
         switch (playerInput) {
@@ -60,8 +61,10 @@ function playRound() {
 }
 // play 5 rounds and return winner of a game
 function game() {
+    // store player and computer scores in corresponding variables
     let playerScore = 0;
     let computerScore = 0;
+    // increase winner's score by 1
     for (let i = 0; i < 5; i++) {
         let result = playRound();
         if (result === 'win') {
@@ -70,6 +73,7 @@ function game() {
             computerScore += 1;
         }
     }
+    // output game result with final score
     let finalScore = `Final score: ${playerScore} - ${computerScore}`;
     if (playerScore > computerScore) {
         console.log(`Victory. ${finalScore}`);
