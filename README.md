@@ -1,4 +1,4 @@
-# rock-paper-scissors
+# rock-paper-scissors-game
 In this project I'm going to test skills obtained from JavaScript Basics section of The Odin Project
 
 This is a basic rock paper scissors game<br>
