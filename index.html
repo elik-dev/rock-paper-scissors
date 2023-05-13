@@ -6,13 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+    <header><span>RPS</span></header>
+    <main>
         <h1>Rock Paper Scissors Game</h1>
-        <p>Work in progress...</p>
+        <div class="game-window">
+            <div class="score-bar">
+                <p>Score: <span class="current-score">0 - 0</span></p>
+            </div>
+            <div class="result-bar">
+                <div class="player-selection">You</div>
+                <p>Round won</p>
+                <div class="computer-selection">AI</div>
+            </div>
+            <div class="selection-bar">
+                <div class="selection">
+                    <img draggable="false" src="img/selection-rock.png" alt="">
+                </div>
+                <div class="selection">
+                    <img draggable="false" src="img/selection-paper.png" alt="">
+                </div>
+                <div class="selection">
+                    <img draggable="false" src="img/selection-scissors.png" alt="">
+                </div>
+                <div class="selection">
+                    <img draggable="false" src="img/selection-restart.png" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>by <a target="_blank" href="https://github.com/elik-dev">elik</a></footer>
 </body>
 
 </html>
