@@ -13,28 +13,33 @@
 <body>
     <header><span>RPS</span></header>
     <main>
-        <h1>Rock Paper Scissors Game</h1>
         <div class="game-window">
+            <h1>Rock Paper Scissors Game</h1>
             <div class="score-bar">
-                <p>Score: <span class="current-score">0 - 0</span></p>
+                <p>Score: <span class="player-score">0</span> - <span class="computer-score">0</span></span></p>
             </div>
-            <div class="result-bar">
-                <div class="player-selection">You</div>
-                <p>Round won</p>
-                <div class="computer-selection">AI</div>
+            <div class="versus-bar">
+                <div class="player-choice">
+                    <img draggable="false" src="img/placeholder-player.png" alt="Player">
+                </div>
+                <p>VS</p>
+                <div class="computer-choice">
+                    <img draggable="false" src="img/placeholder-computer.png" alt="Computer">
+                </div>
             </div>
+            <p class="round-result">Win 5 rounds</p>
             <div class="selection-bar">
                 <div class="selection">
-                    <img draggable="false" src="img/selection-rock.png" alt="">
+                    <img draggable="false" src="img/selection-rock.png" alt="Rock">
                 </div>
                 <div class="selection">
-                    <img draggable="false" src="img/selection-paper.png" alt="">
+                    <img draggable="false" src="img/selection-paper.png" alt="Paper">
                 </div>
                 <div class="selection">
-                    <img draggable="false" src="img/selection-scissors.png" alt="">
+                    <img draggable="false" src="img/selection-scissors.png" alt="Scissors">
                 </div>
                 <div class="selection">
-                    <img draggable="false" src="img/selection-restart.png" alt="">
+                    <img draggable="false" src="img/selection-restart.png" alt="Restart">
                 </div>
             </div>
         </div>
