@@ -65,7 +65,7 @@ a:hover {
 }
 
 /* rps styles */
-.game-window {
+.game {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -109,6 +109,11 @@ a:hover {
 .round-result {
     margin: auto 0;
     font-size: 3vh;
+    transition: all linear 0.1s;
+}
+
+.highlight-blue {
+    color: rgb(0, 127, 255);
 }
 
 .selection-bar {
@@ -125,11 +130,12 @@ a:hover {
     transition: all linear 0.15s;
 }
 
-.selection:hover {
-    box-shadow: 0 5px 15px rgba(0, 127, 255, 0.5);
+.selection-active {
+    box-shadow: 0 2px 4px rgba(0, 127, 255, 0.5);
+    scale: 0.95;
 }
 
-.result-screen {
+.game-end {
     position: absolute;
     inset: 0 -16px;
     backdrop-filter: blur(8px);
@@ -137,9 +143,26 @@ a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 2vh;
+}
+
+.game-end p {
+    margin: 0;
 }
 
 .game-result {
     font-size: 6vh;
     font-weight: bold;
+}
+
+.final-score {
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.restart-button {
+    font-size: 2vh;
+    padding: 1vh;
+    border-radius: 1vh;
+    background-color: white;
 }
