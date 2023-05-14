@@ -128,6 +128,7 @@ a:hover {
 .selection:hover {
     box-shadow: 0 5px 15px rgba(0, 127, 255, 0.5);
 }
+
 .result-screen {
     position: absolute;
     inset: 0 -16px;
@@ -137,6 +138,7 @@ a:hover {
     align-items: center;
     flex-direction: column;
 }
+
 .game-result {
     font-size: 6vh;
     font-weight: bold;
